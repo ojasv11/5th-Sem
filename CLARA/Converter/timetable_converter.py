@@ -1,24 +1,4 @@
-"""
-timetable_converter.py - turn the department's timetable workbooks (grid layout:
-days down, periods across) into ONE flat CSV that can be imported into MySQL.
 
-Rule: only cells with a room written in them are classes. Everything else
-(lunch, library, electives, online/Swayam, a subject with no room) is a break.
-
-Usage
-    python timetable_converter.py TT_A-H.xlsx --course "B.Tech CSE" --year 3 --sections A,B,C,D,E,F,G,H
-    (one section name per timetable block, in the order they appear in the file)
-
-Outputs (in --out-dir, default: the current folder)
-    timetable_rows.csv      one row per class that uses a room
-    timetable_problems.csv  cells a person must check (never guessed silently)
-
-Optional: room_aliases.csv next to this script, with columns raw_name,room_name,
-to map names such as "New Lab-1" to database room names. A room_name of OTHER
-means the room is outside CSIT: those classes are skipped.
-
-Needs: pip install openpyxl
-"""
 
 import argparse
 import csv
