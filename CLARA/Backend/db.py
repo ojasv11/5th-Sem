@@ -1,13 +1,3 @@
-"""
-backend/db.py - all MySQL access for the CLARA GUI.
-
-Install once:   pip install "PyMySQL[rsa]"
-
-Login settings, read in this order (later ones win):
-  1. environment variables CLARA_DB_HOST / PORT / USER / PASSWORD / NAME
-  2. backend/db_config.ini   (keep this file private: don't share or submit it)
-When a user and password are found, the GUI connects without a login window.
-"""
 
 import configparser
 import os
