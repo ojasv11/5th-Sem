@@ -1,14 +1,3 @@
-"""
-backend/timetable_files.py - read a timetable file for the GUI's Upload screen.
-
-  * .xlsx  -> converted with converter/timetable_converter.py (needs: pip install openpyxl)
-  * .csv   -> a timetable_rows.csv already made by the converter
-
-Both return the same thing:
-  rows      list of dicts with the converter's columns (day, start_time, ...)
-  problems  list of (source_cell, text) a person must fix before importing
-  skipped   list of text lines: classes outside CSIT that were left out
-"""
 
 import csv
 import sys
